@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/8fdc27e80b.js" crossorigin="anonymous"></script>
+    <script src="/src/script.js"></script>
+    <title>Panel</title>
+</head>
+<body class="text-white h-screen bg-gray-500">
+    <main class="h-full grid grid-cols-2">
+        <section class="flex-col flex place-items-center justify-center">
+            <h1 class="uppercase underline text-7xl">panel</h1>
+            <article class="mt-16 bg-gray-700 py-4 px-4 rounded-md flex-col flex w-3/4 mx-1 my-1">
+                <label for="" class="uppercase">başlık</label>
+                <input required type="text" class="text-black focus:outline-gray-700 border-none" name="baslık" id="baslık">
+                <hr class="opacity-50 mt-3 mb-2">
+                
+                <label for="" class="uppercase">ürün ismi</label>
+                <input required type="text" class="text-black focus:outline-gray-700 border-none" name="urun_ismi" id="urun_ismi">
+                <hr class="opacity-50 mt-3 mb-2">
+                
+                <label for="" class="uppercase">fotoğraf</label>
+                <input required type="file" class="text-white focus:outline-gray-700 border-none" name="dosya_konum" id="dosya_konum">
+                <hr class="opacity-50 mt-3 mb-2">
+                
+                <label for="" class="uppercase">fiyat <i class="normal-case opacity-50">(TL)</i></label>
+                <input required type="text" class="text-black focus:outline-gray-700 border-none" name="fiyat_tl" id="fiyat_tl">
+                <hr class="opacity-50 mt-3 mb-2">
+                
+                <label for="" class="uppercase">fiyat <i class="normal-case opacity-50">(Kuruş)</i></label>
+                <input required type="text" class="text-black focus:outline-gray-700 border-none" name="fiyat_krs" id="fiyat_krs">
+            </article>
+            
+            <input onclick="create_new_result()" class="mx-1 my-1 bg-green-500 rounded-md text-black shadow-black shadow py-1 w-3/4 uppercasehover:shadow-none transition-all duration-500 ease-in-out hover:bg-green-300 hover:text-orange-700 hover:font-bold uppercase cursor-pointer"  type="button" value="result">
+
+            <article class=""><i class="normal-case opacity-50">(comimg soon)</i></article>
+        </section>
+
+        <section id="result" class="text-white bg-gray-700 h-screen flex-col flex place-items-center justify-center">
+            <div class="mb-4 bg-gray-800 rounded-md py-3 place-items-center px-5 items-center text-center grid grid-cols-2 grid-rows-2 gap-x-6 justify-center">
+                <div class="text-4xl row-span-2">Aperture</div>
+                <div class="bg-gray-600 rounded-md py-2 text-3xl px-2" id="baslık_out">ürünlerimiz</div>
+                <div class="col-start-2 row-start-2 px-4 py-1 bg-gray-900 rounded-md" id="oto_date_out">28 mart - 23 nisan</div>
+            </div>
+
+            <!--  -->
+        
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-3xl uppercase bg-slate-400 w-full rounded-md mb-4 text-center py-1" id="urun_ismi_out">isim</h3>
+                <img class="h-96 rounded-md mb-4" id="img_result_out" src="https://images.pexels.com/photos/16450166/pexels-photo-16450166/free-photo-of-little-kitten.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="resim">
+            
+                <div class="bg-yellow-500 rounded-md py-1 px-4 grid grid-cols-2 grid-rows-2 gap-2 place-items-center">
+                    <div class="text-slate-800 row-span-2 text-7xl" id="fiyat_tl_out">8</div>
+                    <div class="text-2xl">TL</div>
+                    <div class="text-2xl col-start-2" id="fiyat_krs_out">.50</div>
+                </div>
+            </div>
+        
+            <!--  -->
+        
+            <div class="flex items-center justify-between mt-12 bg-green-600 px-16 w-96 py-4 rounded-md">
+                <i class="text-3xl fa-solid fa-phone"></i>
+                <div class="text-2xl">0551 056 46 24</div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

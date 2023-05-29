@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/8fdc27e80b.js" crossorigin="anonymous"></script>
+    <title>giriş ekranı</title>
+</head>
+<body class="select-none">
+    <main class="h-screen place-items-center flex flex-col justify-center bg-gray-500">
+        <article class="text-white bg-gray-600 py-12 px-16 rounded-md text-center">
+            <h1 class="uppercase mb-12 text-4xl">giriş</h1>
+            
+            <form action="" class="flex-col flex items-center justify-center gap-4 relative bg-gray-700 rounded-md py-4 px-8">
+                <div class="-top-8 absolute">
+                    <i class="py-3 px-4 text-4xl bg-gray-600 rounded-full fa-solid fa-user"></i>
+                </div>
+
+
+                <div class="mt-12 flex flex-col text-left">
+                    <label class="uppercase mb-2" for="">isim</label>
+                    <input required type="text" class="text-black focus:outline-gray-700 border-none" name="name" id="name">
+                </div>
+                
+                <div class="mt-4 mb-6 flex flex-col text-left">
+                    <label class="uppercase mb-2" for="">şifre</label>
+                    <input required type="password" class="text-black focus:outline-gray-700 border-none" name="password" id="password">
+                </div>
+
+                <input
+                onclick="sign_post()" 
+                class="
+                    bg-green-500 rounded-md text-black shadow-black shadow py-1 w-full uppercase
+                    hover:shadow-none transition-all duration-500 ease-in-out hover:bg-green-300 
+                    hover:text-orange-700 hover:font-bold cursor-pointer" 
+                    type="button" value="giriş">
+            </form>
+        </article>
+    </main>
+</body>
+<script src="/src/script.js"></script>
+</html>
