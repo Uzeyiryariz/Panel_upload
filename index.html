@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/8fdc27e80b.js" crossorigin="anonymous"></script>
     <title>giriş ekranı</title>
@@ -18,7 +21,6 @@
                     <i class="py-3 px-4 text-4xl bg-gray-600 rounded-full fa-solid fa-user"></i>
                 </div>
 
-
                 <div class="mt-12 flex flex-col text-left">
                     <label class="uppercase mb-2" for="">isim</label>
                     <input required type="text" class="text-black focus:outline-gray-700 border-none" name="name" id="name">
@@ -29,16 +31,10 @@
                     <input required type="password" class="text-black focus:outline-gray-700 border-none" name="password" id="password">
                 </div>
 
-                <input
-                onclick="sign_post()" 
-                class="
-                    bg-green-500 rounded-md text-black shadow-black shadow py-1 w-full uppercase
-                    hover:shadow-none transition-all duration-500 ease-in-out hover:bg-green-300 
-                    hover:text-orange-700 hover:font-bold cursor-pointer" 
-                    type="button" value="giriş">
+                <input onclick="sign_post()" class="bg-green-500 rounded-md text-black shadow-black shadow py-1 w-full uppercase hover:shadow-none transition-all duration-500 ease-in-out hover:bg-green-300 hover:text-orange-700 hover:font-bold cursor-pointer" type="button" value="giriş">
             </form>
         </article>
     </main>
+    <script src="index.js" type="module"></script>
 </body>
-<script src="index.js"></script>
 </html>
